@@ -1,3 +1,4 @@
+import random
 print("hello")
 @app.errorhandler(404)
 def bar(error):
