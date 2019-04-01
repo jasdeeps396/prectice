@@ -1,0 +1,20 @@
+{% extends 'theme.html'%}
+{% block body %}
+<h3>Expense Entry</h3>
+{% if msg %}
+<p>{{msg}}</p>
+{% endif%}
+<form method="POST">
+    <div>
+        <label for="item">Item Name</label>
+        <input id="item" name="item" placeholder="Enter name">
+    </div>
+    <div>
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number" min="0" max="10000" placeholder='Price'>
+    </div>
+    <button>save</button>
+</form>
+<h1>Expenses</h1>
+{{results}}
+{% endblock %}
